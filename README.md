@@ -24,7 +24,7 @@ The enclosure also includes a user interface allowing multiple configurable pres
 
 # Finished Project
 
-![Finished](Images/IMG-20241222-WA0003.jpg)
+![Finished](images/IMG-20241222-WA0003.jpg)
 
 The completed grow box with custom wooden enclosure, aluminium frame, sliding lid and integrated control panel.
 
@@ -48,7 +48,7 @@ The completed grow box with custom wooden enclosure, aluminium frame, sliding li
 
 # Control Panel
 
-![Front Panel](Images/IMG-20241222-WA0002.jpg)
+![Front Panel](images/IMG-20241222-WA0002.jpg)
 
 The front panel contains:
 
@@ -65,7 +65,7 @@ The menu system allows configuring presets without reconnecting the Arduino.
 
 ## Main Menu
 
-![Main Menu](Images/main_menu.jpg)
+![Main Menu](images/main_menu.jpg)
 
 The firmware contains several operating modes:
 
@@ -78,7 +78,7 @@ The firmware contains several operating modes:
 
 ## Automatic Mode
 
-![Automatic](Images/autonomus_menu.jpg)
+![Automatic](images/autonomus_menu.jpg)
 
 Displays:
 
@@ -92,7 +92,7 @@ Displays:
 
 ## Preset Selection
 
-![Choose Preset](Images/chose_preset_menu.jpg)
+![Choose Preset](images/chose_preset_menu.jpg)
 
 Multiple temperature presets can be stored for different mushroom species.
 
@@ -100,7 +100,7 @@ Multiple temperature presets can be stored for different mushroom species.
 
 ## Editing Presets
 
-![Edit Presets](Images/write_min_max_hum.jpg)
+![Edit Presets](images/write_min_max_hum.jpg)
 
 Each preset stores:
 
@@ -112,7 +112,7 @@ Each preset stores:
 
 ## Stored Presets
 
-![Preset List](Images/set_preset_menu.jpg)
+![Preset List](images/set_preset_menu.jpg)
 
 Several environmental profiles can be saved and loaded directly from the keypad.
 
@@ -120,7 +120,7 @@ Several environmental profiles can be saved and loaded directly from the keypad.
 
 ## Tester Mode
 
-![Tester](Images/tester_mode.jpg)
+![Tester](images/tester_mode_menu.jpg)
 
 Every output can be tested independently without running automatic control.
 
@@ -132,7 +132,7 @@ This made hardware debugging significantly easier.
 
 ## Arduino Controller
 
-![Arduino](Images/arduinouno_screw_shield.jpg)
+![Arduino](images/arduinouno_screw_shield.jpg)
 
 The controller is built around an Arduino Uno.
 
@@ -142,7 +142,7 @@ To improve reliability, a screw terminal shield was used for every external conn
 
 ## Custom Screw Shield Cover
 
-![Shield Cover](Images/arduinouno_screw_shield_cover_connected.jpg)
+![Shield Cover](images/arduinouno_screw_shield_cover_connected.jpg)
 
 I designed and 3D printed a protective cover to keep all wiring secure while still allowing easy maintenance.
 
@@ -152,7 +152,7 @@ I designed and 3D printed a protective cover to keep all wiring secure while sti
 
 ## Front Access
 
-![Front Open](Images/finished_open_front.jpg)
+![Front Open](images/finished_open_front.jpg)
 
 The front panel provides access to the control electronics.
 
@@ -160,7 +160,7 @@ The front panel provides access to the control electronics.
 
 ## Rear Cooling System
 
-![Rear](Images/finished_open_back.jpg)
+![Rear](images/finished_open_back.jpg)
 
 The rear contains the cooling assembly with multiple high airflow fans.
 
@@ -168,7 +168,7 @@ The rear contains the cooling assembly with multiple high airflow fans.
 
 ## Internal Wiring
 
-![Open](Images/finished_open_left.jpg)
+![Open](images/finished_open_left.jpg)
 
 All wiring was routed manually and connected through screw terminals for easy servicing.
 
@@ -176,7 +176,7 @@ All wiring was routed manually and connected through screw terminals for easy se
 
 # Cooling Assembly
 
-![Cooling](Images/uncovered_back.jpg)
+![Cooling](images/uncovered_back.jpg)
 
 Three high airflow fans provide active cooling of the enclosure when temperatures exceed the configured maximum.
 
@@ -186,7 +186,7 @@ Three high airflow fans provide active cooling of the enclosure when temperature
 
 Early firmware versions displayed:
 
-![Prototype](Images/unfinished_screen.jpg)
+![Prototype](images/unfinished_screen.jpg)
 
 before the complete menu system was implemented.
 
