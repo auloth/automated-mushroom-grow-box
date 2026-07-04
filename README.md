@@ -1,6 +1,6 @@
 # 🍄 Automated Mushroom Grow Box
 
-An Arduino-based environmental control system designed to automatically regulate temperature and humidity for mushroom cultivation.
+An Arduino-based environmental control system designed to automatically regulate temperature and humidity for mushroom cultivation using active thermoelectric cooling, electric heating and a fully configurable LCD interface.
 
 Although the original source code has unfortunately been lost, the complete hardware design, enclosure, electronics and user interface are documented here as part of my engineering portfolio.
 
@@ -8,25 +8,37 @@ Although the original source code has unfortunately been lost, the complete hard
 
 # Project Overview
 
-This project was built entirely from scratch to create a fully automated growing environment.
+This project was designed and built entirely from scratch to create a fully automated growing environment for mushroom cultivation.
 
-The system continuously monitors temperature and humidity using environmental sensors and automatically controls:
+The system continuously monitors temperature and humidity and automatically controls the environment by activating:
 
 - Heating
-- Cooling
+- Active thermoelectric cooling
 - Humidification
 
-through relay-controlled devices.
+using relay-controlled devices.
 
-The enclosure also includes a user interface allowing multiple configurable presets and manual testing of every subsystem.
+A custom LCD menu system allows the user to configure environmental presets, manually test every subsystem and monitor the current operating conditions without connecting the Arduino to a computer.
 
 ---
 
 # Finished Project
 
-![Finished](images/IMG-20241222-WA0003.jpg)
+![Finished Grow Box](images/IMG-20241222-WA0003.jpg)
 
-The completed grow box with custom wooden enclosure, aluminium frame, sliding lid and integrated control panel.
+The completed grow box featuring a custom wooden enclosure, aluminium frame, sliding insulated lid, LCD interface and integrated environmental controller.
+
+---
+
+# Removable Lid Design
+
+![Finished Grow Box](images/IMG-20241222-WA0001.jpg)
+
+One design goal was to make the enclosure easy to clean and maintain.
+
+The lid is completely removable and the LED lighting together with the temperature/humidity sensor are connected through magnetic electrical connectors.
+
+The three visible cables automatically connect when the lid is installed, allowing it to be removed in seconds without disconnecting any wiring.
 
 ---
 
@@ -34,13 +46,16 @@ The completed grow box with custom wooden enclosure, aluminium frame, sliding li
 
 - Automatic temperature regulation
 - Automatic humidity regulation
-- Multiple saved presets
-- Manual testing mode
+- Three Peltier thermoelectric cooling modules
+- Electric heating system
+- Multiple high airflow cooling fans
+- Multiple configurable presets
+- Manual hardware testing mode
 - LCD menu interface
 - Matrix keypad navigation
 - Real-time sensor monitoring
 - Relay controlled outputs
-- Custom enclosure
+- Custom wooden enclosure
 - 3D printed components
 - Arduino based controller
 
@@ -48,16 +63,16 @@ The completed grow box with custom wooden enclosure, aluminium frame, sliding li
 
 # Control Panel
 
-![Front Panel](images/IMG-20241222-WA0002.jpg)
+![Control Panel](images/controll_pad.jpg)
 
 The front panel contains:
 
-- LCD Display
-- 4x4 Matrix Keypad
+- 20x4 LCD display
+- 4x4 matrix keypad
 - USB programming access
 - Main power switch
 
-The menu system allows configuring presets without reconnecting the Arduino.
+The complete system can be configured directly from the control panel without reconnecting the Arduino to a computer.
 
 ---
 
@@ -67,20 +82,20 @@ The menu system allows configuring presets without reconnecting the Arduino.
 
 ![Main Menu](images/main_menu.jpg)
 
-The firmware contains several operating modes:
+The firmware is organized into several operating modes:
 
-- Automatic operation
-- Choose preset
-- Edit presets
-- Tester mode
+- Automatic Mode
+- Choose Preset
+- Edit Presets
+- Tester Mode
 
 ---
 
 ## Automatic Mode
 
-![Automatic](images/autonomus_menu.jpg)
+![Automatic Mode](images/autonomus_menu.jpg)
 
-Displays:
+During operation the display continuously shows:
 
 - Current temperature
 - Current humidity
@@ -88,43 +103,47 @@ Displays:
 - Cooling status
 - Humidifier status
 
+allowing the system to be monitored in real time.
+
 ---
 
 ## Preset Selection
 
-![Choose Preset](images/chose_preset_menu.jpg)
+![Preset Selection](images/chose_preset_menu.jpg)
 
-Multiple temperature presets can be stored for different mushroom species.
+Different environmental profiles can be stored and selected depending on the mushroom species being cultivated.
 
 ---
 
 ## Editing Presets
 
-![Edit Presets](images/write_min_max_hum.jpg)
+![Preset Editor](images/write_min_max_hum.jpg)
 
-Each preset stores:
+Each preset allows configuration of:
 
-- Maximum temperature
 - Minimum temperature
-- Humidity target
+- Maximum temperature
+- Target humidity
+
+The settings are stored directly from the keypad interface.
 
 ---
 
 ## Stored Presets
 
-![Preset List](images/set_preset_menu.jpg)
+![Stored Presets](images/set_preset_menu.jpg)
 
-Several environmental profiles can be saved and loaded directly from the keypad.
+Multiple preset profiles can be saved and loaded directly from the LCD menu.
 
 ---
 
 ## Tester Mode
 
-![Tester](images/tester_mode_menu.jpg)
+![Tester Mode](images/tester_mode_menu.jpg)
 
-Every output can be tested independently without running automatic control.
+Every output can be activated independently.
 
-This made hardware debugging significantly easier.
+This mode was extremely useful while debugging the electronics, relays and sensors during development.
 
 ---
 
@@ -132,19 +151,19 @@ This made hardware debugging significantly easier.
 
 ## Arduino Controller
 
-![Arduino](images/arduinouno_screw_shield.jpg)
+![Arduino Controller](images/arduinouno_screw_shield.jpg)
 
-The controller is built around an Arduino Uno.
-
-To improve reliability, a screw terminal shield was used for every external connection.
+The controller is built around an Arduino Uno equipped with a screw terminal shield to simplify wiring and improve reliability.
 
 ---
 
-## Custom Screw Shield Cover
+## Custom Electronics Cover
 
-![Shield Cover](images/arduinouno_screw_shield_cover_connected.jpg)
+![Electronics Cover](images/arduinouno_screw_shield_cover_connected.jpg)
 
-I designed and 3D printed a protective cover to keep all wiring secure while still allowing easy maintenance.
+To protect the wiring I designed and 3D printed a custom cover for the screw terminal shield.
+
+The cover keeps every connection secure while still allowing quick access for maintenance.
 
 ---
 
@@ -152,43 +171,49 @@ I designed and 3D printed a protective cover to keep all wiring secure while sti
 
 ## Front Access
 
-![Front Open](images/finished_open_front.jpg)
+![Front Access](images/finished_open_front.jpg)
 
-The front panel provides access to the control electronics.
+The front compartment provides access to the electronics, relay modules and power distribution.
+
+The enclosure was designed so individual components can be serviced without completely disassembling the system.
 
 ---
 
-## Rear Cooling System
+## Rear Cooling Assembly
 
-![Rear](images/finished_open_back.jpg)
+![Rear Cooling](images/finished_open_back.jpg)
 
-The rear contains the cooling assembly with multiple high airflow fans.
+The rear compartment houses the active cooling system including heatsinks, Peltier modules and cooling fans.
 
 ---
 
 ## Internal Wiring
 
-![Open](images/finished_open_left.jpg)
+![Internal Wiring](images/finished_open_left.jpg)
 
-All wiring was routed manually and connected through screw terminals for easy servicing.
-
----
-
-# Cooling Assembly
-
-![Cooling](images/uncovered_back.jpg)
-
-Three high airflow fans provide active cooling of the enclosure when temperatures exceed the configured maximum.
+All electrical connections are routed through screw terminals to simplify maintenance and replacement of individual components.
 
 ---
 
-# LCD Development
+# Cooling System
 
-Early firmware versions displayed:
+![Cooling System](images/uncovered_back.jpg)
 
-![Prototype](images/unfinished_screen.jpg)
+Unlike traditional grow boxes that rely only on ventilation, this project uses **three Peltier (thermoelectric) modules** to actively cool the enclosure.
 
-before the complete menu system was implemented.
+The Arduino activates the Peltiers whenever the temperature exceeds the configured limit.
+
+Large heatsinks together with multiple high-airflow fans remove heat from the hot side of the modules while circulating cooled air throughout the enclosure.
+
+This allows the system to both heat and actively cool the internal environment depending on the current conditions.
+
+---
+
+# Early Development
+
+![Prototype Interface](images/unfinished_screen.jpg)
+
+Early firmware versions focused on testing the LCD interface before the complete menu system and configuration pages were implemented.
 
 ---
 
@@ -197,13 +222,14 @@ before the complete menu system was implemented.
 ## Hardware
 
 - Arduino Uno
-- Relay Modules
+- Screw Terminal Shield
 - LCD 20x4 Display
 - 4x4 Matrix Keypad
-- Environmental Sensor
+- Temperature & Humidity Sensor
+- 3x Peltier Thermoelectric Modules
 - Multiple Cooling Fans
 - Heating Element
-- Humidifier
+- Relay Modules
 - Custom Power Supply
 
 ## Software
@@ -223,18 +249,19 @@ before the complete menu system was implemented.
 
 # Lessons Learned
 
-This project taught me:
+This project provided practical experience in:
 
 - Embedded software architecture
 - State machine design
-- Menu systems
+- LCD menu systems
 - Sensor integration
 - Relay control
 - Environmental automation
-- Hardware debugging
+- Thermal management
 - Electrical wiring
 - Mechanical enclosure design
-- 3D printing for functional parts
+- 3D printing functional components
+- System integration and debugging
 
 ---
 
@@ -242,13 +269,15 @@ This project taught me:
 
 If I rebuild this project I would like to add:
 
-- ESP32 with Wi-Fi
+- ESP32 controller
+- Wi-Fi connectivity
 - Remote monitoring
 - Web dashboard
-- Data logging
-- Automatic graphs
+- Historical temperature and humidity logging
 - Mobile notifications
-- Better cable management
+- PID temperature control
+- Automatic data visualization
+- Improved cable management
 
 ---
 
@@ -256,4 +285,5 @@ If I rebuild this project I would like to add:
 
 Unfortunately the original Arduino source code has been lost after a hardware failure.
 
-This repository documents the hardware design and development process as part of my engineering portfolio.
+This repository preserves the hardware design, user interface, mechanical construction and engineering decisions behind the project as part of my personal engineering portfolio.
+
